@@ -23,6 +23,26 @@ def geodetic_box_dist(
     )
 
 
+# Copyright (c) 2016 Josh Baker
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+# THE SOFTWARE.
+
 cdef double _point_rect_dist_geodetic_rad(
     double pX,
     double pY,
@@ -108,31 +128,3 @@ cdef double _dist_rad(double aX, double aY, double bX, double bY):
     cos_bY = math.cos(bY)
 
     return 2 * math.asin(math.sqrt(sin_dY * sin_dY + sin_dX * sin_dX * cos_aY * cos_bY))
-
-
-
-def planar_box_dist(
-    px: float,
-    py: float,
-    minx: float,
-    miny: float,
-    maxx: float,
-    maxy: float,
-) -> float:
-    cdef double dx, dy
-
-    if px < minx:
-        dx = minx - px
-    elif px <= maxx:
-        dx = 0
-    else:
-        dx = px - maxx
-
-    if py < miny:
-        dy = miny - py
-    elif py <= maxy:
-        dy = 0
-    else:
-        dy = py - maxy
-
-    return dx * dx + dy * dy
