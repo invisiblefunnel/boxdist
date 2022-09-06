@@ -1291,7 +1291,8 @@ static PyObject *__pyx_codeobj__4;
 
 /* Python wrapper */
 static PyObject *__pyx_pw_7boxdist_1geodetic_box_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7boxdist_1geodetic_box_dist = {"geodetic_box_dist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7boxdist_1geodetic_box_dist, METH_VARARGS|METH_KEYWORDS, 0};
+static char __pyx_doc_7boxdist_geodetic_box_dist[] = "geodetic_box_dist(double plon: float, double plat: float, double minlon: float, double minlat: float, double maxlon: float, double maxlat: float) -> float";
+static PyMethodDef __pyx_mdef_7boxdist_1geodetic_box_dist = {"geodetic_box_dist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7boxdist_1geodetic_box_dist, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7boxdist_geodetic_box_dist};
 static PyObject *__pyx_pw_7boxdist_1geodetic_box_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_plon;
   double __pyx_v_plat;
@@ -2176,7 +2177,8 @@ static double __pyx_f_7boxdist__dist_rad(double __pyx_v_aX, double __pyx_v_aY, d
 
 /* Python wrapper */
 static PyObject *__pyx_pw_7boxdist_3planar_box_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_7boxdist_3planar_box_dist = {"planar_box_dist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7boxdist_3planar_box_dist, METH_VARARGS|METH_KEYWORDS, 0};
+static char __pyx_doc_7boxdist_2planar_box_dist[] = "planar_box_dist(double px: float, double py: float, double minx: float, double miny: float, double maxx: float, double maxy: float) -> float";
+static PyMethodDef __pyx_mdef_7boxdist_3planar_box_dist = {"planar_box_dist", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_7boxdist_3planar_box_dist, METH_VARARGS|METH_KEYWORDS, __pyx_doc_7boxdist_2planar_box_dist};
 static PyObject *__pyx_pw_7boxdist_3planar_box_dist(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   double __pyx_v_px;
   double __pyx_v_py;
