@@ -21,4 +21,5 @@ jobs:
           python-version: ${{ matrix.python }}
       - uses: actions/checkout@v2
       - run: pip install ".[tests]"
-      - run: python -m unittest -v tests/boxdist/test_boxdist.py
+      - run: mypy boxdist
+      - run: python -m unittest -v tests/test_boxdist.py

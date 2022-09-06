@@ -1,2 +1,5 @@
-include src/boxdist/py.typed
-include src/boxdist/boxdist.*
+include setup.py
+include pyproject.toml
+include README.md
+include LICENSE
+recursive-include boxdist *.py *.pyx *.pyi *.c py.typed
