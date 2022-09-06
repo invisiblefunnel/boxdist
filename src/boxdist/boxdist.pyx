@@ -94,7 +94,7 @@ cdef double _point_rect_dist_geodetic_rad(
 
 
 # distance on the unit sphere computed using Haversine formula
-def _dist_rad(aX: float, aY: float, bX: float, bY: float) -> float:
+cdef double _dist_rad(double aX, double aY, double bX, double bY):
     if aY == bY and aX == bX:
         return 0
 
