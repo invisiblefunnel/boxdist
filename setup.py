@@ -35,4 +35,5 @@ setup(
             "embedsignature": True,
         },
     ),
+    package_data={"boxdist": ["__init__.pyi", "py.typed"]},
 )
